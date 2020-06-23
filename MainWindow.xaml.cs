@@ -719,7 +719,13 @@ namespace MySecureData
                 MessageBox.Show("Resources\\SettingDat.txt" + "\nkann nicht gestartet werden");
             }
         }
+        private void LabelVersion_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var resDir = new DirectoryInfo("Resources");
 
+            LabelVersion.ToolTip = "Mit Linksklick Setting-File öffnen\n" +
+                                   resDir.FullName;
+        }
 
 
         private void ImagePw_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -1231,5 +1237,9 @@ namespace MySecureData
             }
 
         }
+
+    
+
+  
     }
 }
