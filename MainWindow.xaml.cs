@@ -192,6 +192,37 @@ namespace MySecureData
 
                 ListPw.Remove(dat);
             }
+            if (TextBoxTitelIn.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen","Fehler in TITLE");
+                return;
+            }
+            if (TextBoxWebAdrIn.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen", "Fehler in WEB-ADR");
+                return;
+            }
+            if (TextBoxUserIn.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen", "Fehler in USER");
+                return;
+            }
+
+            if (TextBoxPwIn.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen", "Fehler in PASSWORD");
+                return;
+            }
+            if (TextBoxOpt1In.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen", "Fehler in OPT1");
+                return;
+            }
+            if (TextBoxOpt2In.Text.Contains(";"))
+            {
+                MessageBox.Show("Zeichen ';' nicht benutzen\nanderes Zeichen wählen", "Fehler in OPT2");
+                return;
+            }
 
             CPwDat newDat = new CPwDat { Title = TextBoxTitelIn.Text.Trim(), WebAdr = TextBoxWebAdrIn.Text.Trim(), User = TextBoxUserIn.Text.Trim(), PW = TextBoxPwIn.Text.Trim(), Opt1 = TextBoxOpt1In.Text.Trim(), Opt2 = TextBoxOpt2In.Text.Trim() };
 
