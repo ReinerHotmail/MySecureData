@@ -734,21 +734,35 @@ namespace MySecureData
 
         private void LabelVersion_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+
             try
             {
-                var p = new Process();
-                p.StartInfo = new ProcessStartInfo("Resources\\SettingDat.txt")
-                {
-                    UseShellExecute = true
-                };
-
-                p.Start();
+                Process.Start("explorer.exe", "Resources");
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Resources\\SettingDat.txt" + "\nkann nicht gestartet werden");
+                MessageBox.Show("Explorer kann nicht gestartet werden");
             }
+
+            //try
+            //{
+               
+
+
+            //    var p = new Process();
+            //    p.StartInfo = new ProcessStartInfo("Resources\\SettingDat.txt")
+            //    {
+            //        UseShellExecute = true
+            //    };
+
+            //    p.Start();
+            //}
+            //catch (Exception)
+            //{
+
+            //    MessageBox.Show("Resources\\SettingDat.txt" + "\nkann nicht gestartet werden");
+            //}
         }
         private void LabelVersion_MouseEnter(object sender, MouseEventArgs e)
         {
